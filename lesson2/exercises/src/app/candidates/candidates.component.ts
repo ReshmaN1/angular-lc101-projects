@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Button } from 'protractor';
 
 @Component({
   selector: 'candidates',
@@ -24,7 +25,11 @@ export class CandidatesComponent implements OnInit {
   }
 
   // Code the addToCrew function here:
-
+  addToCrew (selected: Object){
+    if(!this.crew.includes(selected)){
+      this.crew.push(selected);
+    }
+  }
 
   // BONUS: Code the changeMissionName function here:
 
